@@ -74,7 +74,7 @@ class StackArray {
     }
 
     peek() {
-      return this.stackArray[this.stackArray.length-1];
+      return this.stackArray[this.stackArray.length-1] || null;
     }
     push(value){
         this.stackArray.push(value);
@@ -84,8 +84,8 @@ class StackArray {
       if (this.stackArray.length === 0) {
           return null;
       }
-      this.stackArray.pop();
-      return this;
+      const rmvdValue = this.stackArray.pop();
+      return rmvdValue;
     }
   
     isEmpty(){
@@ -93,12 +93,13 @@ class StackArray {
     }
   }
 
+module.exports = StackArray;
 
-  const myStack = new StackArray();
-  myStack.push("Discord");
-  myStack.push("Udemy");
-  myStack.push("google");
-  console.log(myStack.pop());
-  console.log(myStack.pop());
-  console.log(myStack.pop());
-  console.log(myStack.isEmpty());
+// const myStack = new StackArray();
+// myStack.push("Discord");
+// myStack.push("Udemy");
+// myStack.push("google");
+// console.log(myStack.pop());
+// console.log(myStack.pop());
+// console.log(myStack.pop());
+// console.log(myStack.isEmpty());
