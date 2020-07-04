@@ -137,7 +137,6 @@ class BinarySearchTree {
               parentNode.left = leftmost;
             }
             else if (currentNode.value > parentNode.value){
-              //what is there is something on parent's right. Wouldnt it get replaced ?
               parentNode.right = leftmost;
             } 
           }
