@@ -5,8 +5,8 @@ function selectionSort(array) {
     // set a position - initally 1 increments as it goes
     for(let i=0;i<array.length-1;i++){
         let comparePos = i;
-        
-        for(let j=comparePos;j<array.length;j++){
+
+        for(let j=comparePos+1;j<array.length;j++){
             if(array[comparePos] > array[j]){
                 let swap = array[comparePos];
                 array[comparePos] = array[j];
